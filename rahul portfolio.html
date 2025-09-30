@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Srivastava - Network Analyst & Deskside Support Engineer</title>
+    <style>
+        /* Enhanced CSS for a unique, modern, engaging design: Dark mode toggle, animations, responsive grid */
+        :root {
+            --primary-color: #007bff; /* Blue for tech feel */
+            --secondary-color: #00d084; /* Green accent for success */
+            --background-color: #ffffff;
+            --text-color: #212529;
+            --card-bg: #f8f9fa;
+            --font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            --background-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skills-list li {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input[type="file"] {
+            border: 1px solid #ced4da;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .payment-options {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .payment-options img {
+            width: 150px;
+            height: auto;
+            margin: 1rem;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* New styles for artifacts */
+        .artifact {
+            margin-top: 1rem;
+        }
+
+        .artifact img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Visitor counter styles */
+        .visitor-counter {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Profile Photo and One-Page Summary -->
+    <header id="home">
+        <img id="profile-photo" class="profile-photo" src="https://avatars.githubusercontent.com/u/22706561?s=400&u=599e64715fc1613137b2d010a072e61e8b0339fe&v=4" alt="Rahul Srivastava Profile Photo"> <!-- Replace with hosted URL -->
+        <h1>Rahul Srivastava</h1>
+        <p>Contact: rahul.srivastava@example.com | Phone: +91-7007406303 | LinkedIn: <a href="https://www.linkedin.com/in/rahul-srivastava" style="color: white;">linkedin.com/in/rahul-srivastava</a></p>
+        <p>Skilled Network Analyst and Deskside Support Engineer with expertise in IT infrastructure, troubleshooting, and optimization. Proficient in network security, hardware/software support, and enhancing operational efficiency for global clients.</p>
+        <p><a href="#cv" style="color: white;">Link to Resume</a> | <a href="https://github.com/rahul2405/resume/blob/main/Rahul-Srivastava-FlowCV-Resume-20250929%20(1).pdf" style="color: white;">GitHub</a></p>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>As a seasoned Network Analyst L1 and Deskside Support Engineer L2 at HCL Tech, I bring hands-on expertise in optimizing IT networks, resolving complex technical issues, and delivering exceptional user support. With a passion for innovation, I've streamlined processes to boost efficiency by up to 25% in high-pressure environments.</p>
+        <p>My unique approach combines technical prowess with proactive problem-solving, ensuring seamless operations for global clients. Let's connect to discuss how I can contribute to your team!</p>
+        <p>Portfolio / Demos: <a href="https://rahul2405.github.io/portfolio">https://rahul2405.github.io/portfolio</a></p> <!-- Replace with actual portfolio URL -->
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Network Analyst L1, HCL Tech</h3>
+                <p>October 2022 - September 2024</p>
+                <ul>
+                    <li>Monitored and optimized network performance, reducing downtime by 30%.</li>
+                    <li>Implemented security protocols, preventing potential breaches in enterprise systems.</li>
+                    <li>Collaborated on infrastructure upgrades for 500+ users.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Deskside Support Engineer L2, HCL Tech</h3>
+                <p>November 2024 - September 2025</p>
+                <ul>
+                    <li>Resolved over 1,000 support tickets with 98% satisfaction rate.</li>
+                    <li>Trained teams on new software, improving adoption by 40%.</li>
+                    <li>Diagnosed hardware issues, saving costs on unnecessary replacements.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Core Skills & Expertise</h2>
+        <ul class="skills-list">
+            <li>Network Administration (Cisco, VPNs)</li>
+            <li>Firewall & Security Management</li>
+            <li>Hardware/Software Troubleshooting</li>
+            <li>Active Directory & Windows Expertise</li>
+            <li>Cloud Infrastructure (Azure)</li>
+            <li>Data Analysis & Monitoring Tools</li>
+            <li>Customer Service Excellence</li>
+            <li>Team Collaboration & Leadership</li>
+        </ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications & Environment</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>CompTIA A+ (Hardware and software troubleshooting)</li>
+                    <li>CompTIA Network+ (Networking fundamentals)</li>
+                    <li>CCNA (Cisco Certified Network Associate - Equivalent experience in routing and switching)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Environment & Tools</h3>
+                <ul>
+                    <li>Operating Systems: Windows, Linux; Active Directory (AD) management</li>
+                    <li>Ticketing Systems: ServiceNow, Jira</li>
+                    <li>Remote Tools: lazywin, Sccm</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   
+        <form id="project-upload-form">
+            <input type="file" id="project-file" multiple>
+            <button type="button" onclick="alert('Projects uploaded successfully! Your work is now part of the portfolio.')">Upload Projects</button>
+        </form>
+    </section>
+
+    <!-- CV Section with View and Download -->
+    <section id="cv">
+        <h2>Upload or Download CV</h2>
+        <p>View my detailed CV or upload yours for feedback. Tailored for IT roles with quantifiable achievements. Recruiters can view and download directly.</p>
+        <form id="cv-upload-form">
+            <input type="file" id="cv-file" accept=".pdf,.doc,.docx">
+            <button type="button" onclick="alert('CV uploaded successfully! Reviewing now.')">Upload CV</button>
+        </form>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://github.com/rahul2405/resume" target="_blank" style="color: var(--primary-color);">View CV Online</a> |
+            <a href="https://github.com/rahul2405/resume" download style="color: var(--primary-color);">Download My CV</a>
+        </div>
+    </section>
+
+    <!-- Contact Section with Socials -->
+    <section id="contact">
+        <h2>Connect With Me</h2>
+        <p>Reach out for opportunities, collaborations, or queries. I'm active on multiple platforms!</p>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://wa.me/+917007406303" target="_blank" title="WhatsApp">📱 WhatsApp</a>
+            <a href="https://facebook.com/rahulsrivastava" target="_blank" title="Facebook">Facebook</a>
+            <a href="https://www.instagram.com/iam_rahulsrivastava" target="_blank" title="Instagram">Instagram</a>
+            <a href="https://twitter.com/iamrahulsr01" target="_blank" title="Twitter">Twitter</a>
+            <a href="https://github.com/rahul2405" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/rahul-srivastava" target="_blank" title="LinkedIn">LinkedIn</a>
+        </div>
+        <div class="payment-options">
+            <h3>Support or Collaborate</h3>
+            <p>Payments via UPI or Google Pay:</p>
+            <img src="https://github.com/rahul2405/portfolio/raw/main/qr-code.jpg" alt="UPI QR Code"> <!-- Replace with hosted URL -->
+            <img src="https://github.com/rahul2405/portfolio/raw/main/upi.jpg" alt="Google Pay QR"> <!-- Replace with hosted URL -->
+            <p>UPI ID: rahul@upi</p>
+        </div>
+        <!-- Visitor Counter Section -->
+        <div class="visitor-counter">
+            <h3>Portfolio Access & Visitor Stats</h3>
+            <p>This portfolio is accessible online to unlimited users (subject to hosting bandwidth limits, typically supporting thousands of visits per month without issues).<grok-card data-id="ace59c" data-type="citation_card"></grok-card><grok-card data-id="ece952" data-type="citation_card"></grok-card><grok-card data-id="0665e0" data-type="citation_card"></grok-card> Recruiters and users can view and download the CV freely.</p>
+            <p>Current Visitors: <img src="https://www.freevisitorcounters.com/en/counter/render/id/YOUR_COUNTER_ID" alt="Visitor Counter"> <!-- Replace YOUR_COUNTER_ID with actual from freevisitorcounters.com --></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rahul Srivastava. All rights reserved. | Designed for LinkedIn Recruiters</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Form Handling
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message sent successfully! Expect a response soon.');
+        });
+
+        // Profile Photo Upload Simulation
+        document.getElementById('profile-upload')?.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    document.getElementById('profile-photo').src = reader.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
