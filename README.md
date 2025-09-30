@@ -3,6 +3,6 @@
 Welcome to my personal portfolio!  
 Built with HTML and CSS.
 
-Live site: file:///C:/Users/hp/Documents/index.html
+Live site:https://github.com/rahul2405/portfolio.git
 
 Contact me: srivastavar039.com
